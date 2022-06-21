@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+// PlayerJump.h
+//----------------------------------------------------------------------------------------
+// çÏê¨é“ÅFñˆëÚ îøãM
+//----------------------------------------------------------------------------------------
+// à⁄ìÆÇ…ä÷Ç∑ÇÈÇ±Ç∆
+// 
+//-----------------------------------------------------------------------------------------
+// 2021/01/06	çÏê¨
+//				
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+#pragma once
+
+#include "PlayerState.h"
+
+class PlayerJump :public PlayerState
+{
+public:
+	static PlayerJump *GetInstance()
+	{
+		static PlayerJump instance;
+		return &instance;
+	}
+
+	virtual void Init(Player *obj);
+	//	virtual void Uninit(Player *obj);
+	virtual void Update(Player *obj);
+	//	virtual void Draw(Player *obj);
+	virtual void ChangeState(Player * obj, PlayerState *newState);
+};
